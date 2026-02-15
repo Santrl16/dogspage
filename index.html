@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare Pro - Cuidado Veterinario Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!-- LANDING PAGE -->
+    <!-- ============================================ -->
+    <div id="landing-section" class="section active">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <nav class="landing-nav">
+                <div class="nav-content">
+                    <div class="logo-landing">
+                        <i class="fas fa-paw"></i>
+                        <span>PetCare Pro</span>
+                    </div>
+                    <div class="nav-buttons">
+                        <button class="btn-nav" onclick="showAuthModal('login')">Iniciar Sesión</button>
+                        <button class="btn-nav btn-nav-primary" onclick="showAuthModal('register')">Registrarse</button>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Cuida a tu mascota con<br>
+                        <span class="gradient-text">Tecnología Profesional</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Gestiona la salud de tus mascotas, calcula alimentación personalizada 
+                        y accede a información veterinaria profesional, todo en un solo lugar.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-hero btn-hero-primary" onclick="showAuthModal('register')">
+                            <span>Comenzar Gratis</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="btn-hero btn-hero-secondary" onclick="scrollToFeatures()">
+                            <span>Ver Características</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-card">
+                        <i class="fas fa-dog"></i>
+                        <h3>Gestión Completa</h3>
+                        <p>Control total de la salud de tus mascotas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <section id="features-section" class="features-section">
+            <div class="container">
+                <div class="section-header-landing">
+                    <h2>¿Qué Ofrecemos?</h2>
+                    <p>Herramientas profesionales para el cuidado de tus mascotas</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Perfiles de Mascotas</h3>
+                        <p>Registra y gestiona información completa de cada una de tus mascotas con fotos y datos importantes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Calculadora de Alimentación</h3>
+                        <p>Calcula la cantidad exacta de comida según peso, edad y nivel de actividad de tu mascota.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-book-medical"></i>
+                        </div>
+                        <h3>Información de Razas</h3>
+                        <p>Accede a información detallada sobre características, cuidados y enfermedades comunes de cada raza.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Datos en la Nube</h3>
+                        <p>Toda tu información guardada de forma segura y accesible desde cualquier dispositivo.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>100% Responsive</h3>
+                        <p>Usa PetCare Pro desde tu computadora, tablet o smartphone sin problemas.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Seguro y Confiable</h3>
+                        <p>Información respaldada por conocimiento veterinario profesional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>¿Quiénes Somos?</h2>
+                        <p>
+                            PetCare Pro es una plataforma desarrollada por profesionales de tecnología 
+                            en colaboración con técnicos veterinarios. Nuestro objetivo es proporcionar 
+                            herramientas digitales que faciliten el cuidado responsable de las mascotas.
+                        </p>
+                        <p>
+                            Creemos que cada mascota merece el mejor cuidado posible, y la tecnología 
+                            puede ser una aliada poderosa para lograrlo. Por eso desarrollamos herramientas 
+                            basadas en información veterinaria real y actualizada.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <h3>100%</h3>
+                                <p>Gratis</p>
+                            </div>
+                            <div class="stat">
+                                <h3>24/7</h3>
+                                <p>Disponible</p>
+                            </div>
+                            <div class="stat">
+                                <h3>∞</h3>
+                                <p>Mascotas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="about-card">
+                            <i class="fas fa-dog"></i>
+                            <p>Desarrollado para tu mascota</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>¿Listo para empezar?</h2>
+                <p>Únete a PetCare Pro y lleva el cuidado de tu mascota al siguiente nivel</p>
+                <button class="btn-hero btn-hero-primary" onclick="showAuthModal('register')">
+                    <span>Crear Cuenta Gratis</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="landing-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="logo-landing">
+                            <i class="fas fa-paw"></i>
+                            <span>PetCare Pro</span>
+                        </div>
+                        <p>Cuidado veterinario profesional al alcance de todos</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Contacto</h4>
+                        <p>info@petcarepro.com (correo falso att: Santiago Ramirez)</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 PetCare Pro. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- MODAL DE AUTENTICACIÓN -->
+    <!-- ============================================ -->
+    <div id="auth-modal" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close-btn" onclick="closeAuthModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <!-- Login Form -->
+            <div id="modal-login-form" class="auth-modal-content">
+                <div class="modal-header">
+                    <div class="modal-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h2>Iniciar Sesión</h2>
+                    <p>Bienvenido de nuevo a petcare pro</p>
+                </div>
+                <form onsubmit="return handleLogin(event)" class="modal-form">
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="modal-login-email" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="modal-login-password" placeholder="Contraseña" required>
+                    </div>
+                    <button type="submit" class="btn-modal btn-modal-primary">
+                        <span>Entrar</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+                <div class="modal-footer">
+                    <p>¿No tienes cuenta? <a href="#" onclick="switchAuthModal('register')">Regístrate aquí</a></p>
+                </div>
+            </div>
+
+            <!-- Register Form -->
+            <div id="modal-register-form" class="auth-modal-content" style="display: none;">
+                <div class="modal-header">
+                    <div class="modal-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h2>Crear Cuenta</h2>
+                    <p>Únete a PetCare Pro</p>
+                </div>
+                <form onsubmit="return handleRegister(event)" class="modal-form">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="modal-register-name" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="modal-register-email" placeholder="Correo electrónico" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="modal-register-password" placeholder="Contraseña (mín 6 caracteres)" required minlength="6">
+                    </div>
+                    <button type="submit" class="btn-modal btn-modal-success">
+                        <span>Crear Cuenta</span>
+                        <i class="fas fa-user-plus"></i>
+                    </button>
+                </form>
+                <div class="modal-footer">
+                    <p>¿Ya tienes cuenta? <a href="#" onclick="switchAuthModal('login')">Inicia sesión</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- ONBOARDING (Primera mascota) -->
+    <!-- ============================================ -->
+    <div id="onboarding-section" class="section">
+        <div class="onboarding-container">
+            <div class="onboarding-card">
+                <div class="onboarding-header">
+                    <div class="logo-landing">
+                        <i class="fas fa-paw"></i>
+                        <span>PetCare Pro</span>
+                    </div>
+                    <h2>¡Bienvenido, <span id="onboarding-user-name"></span>! 🎉</h2>
+                    <p>Comienza registrando tu primera mascota</p>
+                </div>
+                <form onsubmit="return handleOnboarding(event)" class="onboarding-form">
+                    <div class="photo-upload-section">
+                        <div class="photo-preview" id="photo-preview">
+                            <i class="fas fa-camera"></i>
+                            <p>Agregar foto</p>
+                        </div>
+                        <input type="file" id="pet-photo" accept="image/*" onchange="previewPhoto(event)">
+                        <label for="pet-photo" class="btn-upload">
+                            <i class="fas fa-upload"></i>
+                            Subir Foto
+                        </label>
+                    </div>
+                    <div class="form-grid-onboarding">
+                        <div class="input-group">
+                            <label><i class="fas fa-signature"></i> Nombre de tu mascota</label>
+                            <input type="text" id="onboard-pet-name" placeholder="Ej: Rocky" required>
+                        </div>
+                        <div class="input-group">
+                            <label><i class="fas fa-dna"></i> Raza</label>
+                            <select id="onboard-pet-breed" required>
+                                <option value="">Selecciona una raza</option>
+                                <option value="Labrador">Labrador</option>
+                                <option value="Pastor Alemán">Pastor Alemán</option>
+                                <option value="Golden Retriever">Golden Retriever</option>
+                                <option value="Bulldog Francés">Bulldog Francés</option>
+                                <option value="Bulldog">Bulldog</option>
+                                <option value="Beagle">Beagle</option>
+                                <option value="Poodle">Poodle</option>
+                                <option value="Rottweiler">Rottweiler</option>
+                                <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+                                <option value="Boxer">Boxer</option>
+                                <option value="Chihuahua">Chihuahua</option>
+                                <option value="Pitbull">Pitbull</option>
+                                <option value="Mestizo">Mestizo</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label><i class="fas fa-weight"></i> Peso (kg)</label>
+                            <input type="number" id="onboard-pet-weight" step="0.1" min="0.1" placeholder="Ej: 25.5" required>
+                        </div>
+                        <div class="input-group">
+                            <label><i class="fas fa-calendar"></i> Edad (años)</label>
+                            <input type="number" id="onboard-pet-age" step="0.1" min="0" placeholder="Ej: 3.5" required>
+                        </div>
+                        <div class="input-group full-width">
+                            <label><i class="fas fa-running"></i> Nivel de Actividad</label>
+                            <select id="onboard-pet-activity" required>
+                                <option value="">Selecciona el nivel</option>
+                                <option value="cachorro">Cachorro (Muy activo, en crecimiento)</option>
+                                <option value="activo">Adulto Activo (Ejercicio diario intenso)</option>
+                                <option value="normal">Adulto Normal (Ejercicio moderado)</option>
+                                <option value="sedentario">Adulto Sedentario (Poco ejercicio)</option>
+                                <option value="senior">Edad avanzada (Mayor de 7 años)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-modal btn-modal-success btn-lg">
+                        <span>Completar Registro</span>
+                        <i class="fas fa-check"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- DASHBOARD PRINCIPAL -->
+    <!-- ============================================ -->
+    <div id="dashboard-section" class="section">
+        <header class="main-header">
+            <div class="header-content">
+                <div class="logo-header">
+                    <i class="fas fa-paw"></i>
+                    <span>PetCare Pro</span>
+                </div>
+                <div class="header-right">
+                    <div class="user-info">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="user-name-display"></span>
+                    </div>
+                    <button class="btn btn-danger btn-sm" onclick="handleLogout()">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Salir
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <nav class="main-nav">
+            <div class="nav-container">
+                <button class="nav-btn active" onclick="showSection('my-pets')">
+                    <i class="fas fa-dog"></i>
+                    <span>Mis Mascotas</span>
+                </button>
+                <button class="nav-btn" onclick="showSection('add-pet')">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Agregar Mascota</span>
+                </button>
+                <button class="nav-btn" onclick="showSection('food-calculator')">
+                    <i class="fas fa-utensils"></i>
+                    <span>Calculadora Comida</span>
+                </button>
+                <button class="nav-btn" onclick="showSection('breeds-info')">
+                    <i class="fas fa-book"></i>
+                    <span>Razas</span>
+                </button>
+            </div>
+        </nav>
+
+        <main class="dashboard-content">
+            <!-- MIS MASCOTAS -->
+            <section id="my-pets-section" class="content-section active">
+                <div class="section-header">
+                    <h2><i class="fas fa-dog"></i> Mis Mascotas</h2>
+                    <p class="section-subtitle">Gestiona la información de tus mascotas</p>
+                </div>
+                <div id="pets-grid" class="pets-grid"></div>
+            </section>
+
+            <!-- AGREGAR MASCOTA -->
+            <section id="add-pet-section" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-plus-circle"></i> Agregar Nueva Mascota</h2>
+                    <p class="section-subtitle">Completa la información de tu mascota</p>
+                </div>
+                <div class="form-container">
+                    <form id="add-pet-form" onsubmit="return handleAddPet(event)">
+                        <div class="photo-upload-section-inline">
+                            <div class="photo-preview-inline" id="add-photo-preview">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <input type="file" id="add-pet-photo" accept="image/*" onchange="previewAddPhoto(event)">
+                            <label for="add-pet-photo" class="btn-upload-inline">
+                                <i class="fas fa-upload"></i>
+                                Agregar Foto
+                            </label>
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label><i class="fas fa-signature"></i> Nombre</label>
+                                <input type="text" id="add-pet-name" placeholder="Ej: Rocky" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-dna"></i> Raza</label>
+                                <select id="add-pet-breed" required>
+                                    <option value="">Selecciona una raza</option>
+                                    <option value="Labrador">Labrador</option>
+                                    <option value="Pastor Alemán">Pastor Alemán</option>
+                                    <option value="Golden Retriever">Golden Retriever</option>
+                                    <option value="Bulldog Francés">Bulldog Francés</option>
+                                    <option value="Beagle">Beagle</option>
+                                    <option value="Poodle">Poodle</option>
+                                    <option value="Chihuahua">Chihuahua</option>
+                                    <option value="Pitbull">Pitbull</option>
+                                    <option value="Mestizo">Mestizo</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-weight"></i> Peso (kg)</label>
+                                <input type="number" id="add-pet-weight" step="0.1" min="0.1" placeholder="Ej: 25.5" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-calendar"></i> Edad (años)</label>
+                                <input type="number" id="add-pet-age" step="0.1" min="0" placeholder="Ej: 3.5" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label><i class="fas fa-running"></i> Nivel de Actividad</label>
+                                <select id="add-pet-activity" required>
+                                    <option value="">Selecciona el nivel</option>
+                                    <option value="cachorro">Cachorro (Muy activo)</option>
+                                    <option value="activo">Adulto Activo</option>
+                                    <option value="normal">Adulto Normal</option>
+                                    <option value="sedentario">Adulto Sedentario</option>
+                                    <option value="senior">Edad avanzada (Mayor de 7 años)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-success btn-lg">
+                                <i class="fas fa-save"></i>
+                                Guardar Mascota
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- CALCULADORA DE COMIDA -->
+            <section id="food-calculator-section" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-utensils"></i> Calculadora de Comida</h2>
+                    <p class="section-subtitle">Calcula la cantidad diaria recomendada</p>
+                </div>
+                <div class="calculator-container">
+                    <div class="calculator-card">
+                        <div class="calculator-form">
+                            <div class="form-group">
+                                <label><i class="fas fa-dog"></i> Selecciona tu mascota</label>
+                                <select id="food-select-pet" onchange="loadPetDataFood()">
+                                    <option value="">Seleccionar o ingresar manualmente</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-weight"></i> Peso (kg)</label>
+                                <input type="number" id="food-weight" step="0.1" min="0.1" placeholder="Ej: 25.5">
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-running"></i> Nivel de Actividad</label>
+                                <select id="food-activity">
+                                    <option value="2.0">Cachorro</option>
+                                    <option value="1.6">Adulto Activo</option>
+                                    <option value="1.4" selected>Adulto Normal</option>
+                                    <option value="1.2">Adulto Sedentario</option>
+                                    <option value="1.0">Senior</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-warning btn-lg" onclick="calculateFood()">
+                                <i class="fas fa-calculator"></i>
+                                Calcular
+                            </button>
+                        </div>
+                        <div id="food-result" class="result-card" style="display: none;"></div>
+                        <div class="info-box info-blue">
+                            <i class="fas fa-info-circle"></i>
+                            <div>
+                                <strong>Nota:</strong>
+                                <p>Esta calculadora usa fórmulas veterinarias estándar. Consulta con tu veterinario para ajustes específicos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INFORMACIÓN DE RAZAS -->
+            <section id="breeds-info-section" class="content-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-book"></i> Información de Razas</h2>
+                    <p class="section-subtitle">Conoce las características de diferentes razas</p>
+                </div>
+                <div class="breeds-grid" id="breeds-grid"></div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <p>&copy; 2026 Santiago Ramirez | Desarrollado para tu mascota</p>
+        </footer>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- PANEL ADMIN -->
+    <!-- ============================================ -->
+    <div id="admin-section" class="section">
+        <header class="main-header">
+            <div class="header-content">
+                <div class="logo-header">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Admin Panel</span>
+                </div>
+                <div class="header-right">
+                    <button class="btn btn-danger btn-sm" onclick="exitAdmin()">
+                        <i class="fas fa-arrow-left"></i>
+                        Volver al Dashboard
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="dashboard-content">
+            <div class="admin-stats">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="total-users">0</h3>
+                        <p>Usuarios Registrados</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="total-pets">0</h3>
+                        <p>Mascotas Registradas</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 id="avg-pets">0</h3>
+                        <p>Promedio Mascotas/Usuario</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-tables">
+                <div class="admin-table-container">
+                    <h3><i class="fas fa-users"></i> Usuarios Registrados</h3>
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Email</th>
+                                    <th>Fecha Registro</th>
+                                    <th># Mascotas</th>
+                                </tr>
+                            </thead>
+                            <tbody id="users-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="admin-table-container">
+                    <h3><i class="fas fa-paw"></i> Todas las Mascotas</h3>
+                    <div class="table-responsive">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Raza</th>
+                                    <th>Peso</th>
+                                    <th>Edad</th>
+                                    <th>Dueño</th>
+                                </tr>
+                            </thead>
+                            <tbody id="pets-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal Breed Detail -->
+    <div id="breed-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeBreedModal()">&times;</span>
+            <div id="breed-modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast-container"></div>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
