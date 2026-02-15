@@ -33,6 +33,8 @@ body {
     color: var(--dark);
     line-height: 1.6;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .section {
@@ -882,6 +884,7 @@ body {
     display: flex;
     gap: 5px;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .nav-btn {
@@ -1727,173 +1730,6 @@ body {
 }
 
 /* ============================================ */
-/* RESPONSIVE */
-/* ============================================ */
-@media (max-width: 968px) {
-    .hero-content {
-        grid-template-columns: 1fr;
-        padding: 60px 30px;
-    }
-
-    .hero-title {
-        font-size: 42px;
-    }
-
-    .hero-image {
-        display: none;
-    }
-
-    .about-content {
-        grid-template-columns: 1fr;
-    }
-
-    .about-image {
-        display: none;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .header-content {
-        padding: 15px 20px;
-    }
-
-    .logo-header,
-    .logo-landing {
-        font-size: 20px;
-    }
-
-    .logo-header i,
-    .logo-landing i {
-        font-size: 28px;
-    }
-
-    .user-info span {
-        display: none;
-    }
-
-    .nav-container {
-        padding: 0 20px;
-    }
-
-    .nav-btn {
-        padding: 15px 20px;
-        font-size: 14px;
-    }
-
-    .nav-btn span {
-        display: none;
-    }
-
-    .nav-btn i {
-        font-size: 20px;
-    }
-
-    .dashboard-content {
-        padding: 25px 20px;
-    }
-
-    .section-header h2 {
-        font-size: 26px;
-    }
-
-    .pets-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .form-container {
-        padding: 25px;
-    }
-
-    .form-grid,
-    .form-grid-onboarding {
-        grid-template-columns: 1fr;
-    }
-
-    .result-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .breeds-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .modal-container {
-        padding: 40px 30px;
-    }
-
-    .onboarding-card {
-        padding: 35px 25px;
-    }
-
-    .hero-title {
-        font-size: 36px;
-    }
-
-    .hero-subtitle {
-        font-size: 18px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .btn-hero {
-        width: 100%;
-    }
-
-    .section-header-landing h2 {
-        font-size: 32px;
-    }
-
-    .cta-section h2 {
-        font-size: 36px;
-    }
-
-    #toast-container {
-        right: 15px;
-        left: 15px;
-    }
-
-    .toast {
-        min-width: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .section-header h2 {
-        font-size: 22px;
-    }
-
-    .result-value {
-        font-size: 36px;
-    }
-
-    .form-container {
-        padding: 20px;
-    }
-
-    .calculator-card {
-        padding: 25px;
-    }
-
-    .admin-stats {
-        grid-template-columns: 1fr;
-    }
-
-    .hero-title {
-        font-size: 28px;
-    }
-
-    .section-header-landing h2 {
-        font-size: 28px;
-    }
-}
-
-/* ============================================ */
 /* LOADING OVERLAY */
 /* ============================================ */
 #loading-overlay {
@@ -1936,10 +1772,696 @@ body {
     font-weight: 600;
     margin: 0;
 }
+
 .breed-image img {
     transition: transform 0.3s ease;
 }
 
 .breed-card:hover .breed-image img {
     transform: scale(1.1);
+}
+
+/* ============================================ */
+/* RESPONSIVE MOBILE OPTIMIZADO */
+/* ============================================ */
+@media (max-width: 968px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        padding: 60px 30px;
+    }
+
+    .hero-title {
+        font-size: 42px;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        display: none;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Container adjustments */
+    .container {
+        padding: 0 20px;
+    }
+
+    /* Header improvements */
+    .header-content {
+        padding: 12px 15px;
+    }
+
+    .logo-header,
+    .logo-landing {
+        font-size: 18px;
+    }
+
+    .logo-header i,
+    .logo-landing i {
+        font-size: 24px;
+    }
+
+    .user-info {
+        font-size: 14px;
+    }
+
+    .user-info span {
+        display: none;
+    }
+
+    .btn-sm {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    /* Navigation improvements */
+    .nav-content {
+        padding: 0 15px;
+    }
+
+    .nav-buttons {
+        gap: 8px;
+    }
+
+    .btn-nav {
+        padding: 8px 16px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .nav-container {
+        padding: 0 15px;
+        gap: 0;
+    }
+
+    .nav-btn {
+        padding: 14px 12px;
+        font-size: 12px;
+        flex: 1;
+        justify-content: center;
+        min-width: fit-content;
+    }
+
+    .nav-btn span {
+        display: none;
+    }
+
+    .nav-btn i {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .main-nav {
+        top: 60px;
+    }
+
+    /* Dashboard content */
+    .dashboard-content {
+        padding: 20px 15px;
+    }
+
+    .section-header {
+        margin-bottom: 20px;
+    }
+
+    .section-header h2 {
+        font-size: 22px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+    }
+
+    /* Pet cards */
+    .pets-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .pet-card {
+        padding: 20px;
+    }
+
+    .pet-card-header {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .pet-photo,
+    .pet-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+
+    .pet-card-title h3 {
+        font-size: 19px;
+    }
+
+    .pet-card-title p {
+        font-size: 13px;
+    }
+
+    .pet-info-item {
+        padding: 8px;
+        font-size: 13px;
+        flex-wrap: wrap;
+    }
+
+    .pet-info-item strong {
+        min-width: 60px;
+        font-size: 13px;
+    }
+
+    .pet-info-item span {
+        font-size: 13px;
+    }
+
+    .pet-card-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .pet-card-actions .btn {
+        width: 100%;
+    }
+
+    /* Forms */
+    .form-container {
+        padding: 20px 15px;
+    }
+
+    .form-grid,
+    .form-grid-onboarding {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group select {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    /* Calculator */
+    .calculator-container {
+        padding: 0 10px;
+    }
+
+    .calculator-card {
+        padding: 20px 15px;
+    }
+
+    .result-card {
+        padding: 20px 15px;
+    }
+
+    .result-value {
+        font-size: 36px;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .result-item {
+        padding: 15px;
+    }
+
+    .result-item-value {
+        font-size: 24px;
+    }
+
+    .result-recommendations {
+        padding: 15px;
+    }
+
+    .result-recommendations h4 {
+        font-size: 15px;
+    }
+
+    .result-recommendations li {
+        font-size: 13px;
+        padding: 6px 0;
+    }
+
+    /* Breeds */
+    .breeds-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .breed-card {
+        max-width: 100%;
+    }
+
+    .breed-image {
+        height: 180px;
+        font-size: 50px;
+    }
+
+    .breed-content {
+        padding: 15px;
+    }
+
+    .breed-content h3 {
+        font-size: 18px;
+    }
+
+    .breed-description {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    /* Modals */
+    .modal-container {
+        padding: 30px 20px;
+        width: 95%;
+        max-width: 95%;
+    }
+
+    .modal-header h2 {
+        font-size: 24px;
+    }
+
+    .modal-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .modal-icon i {
+        font-size: 35px;
+    }
+
+    .modal-form .input-group input {
+        padding: 14px 16px 14px 48px;
+        font-size: 14px;
+    }
+
+    .btn-modal {
+        padding: 14px 28px;
+        font-size: 15px;
+    }
+
+    /* Onboarding */
+    .onboarding-container {
+        padding: 20px 15px;
+    }
+
+    .onboarding-card {
+        padding: 25px 20px;
+    }
+
+    .onboarding-header h2 {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .onboarding-header p {
+        font-size: 15px;
+    }
+
+    .photo-preview {
+        width: 120px;
+        height: 120px;
+    }
+
+    .photo-preview i {
+        font-size: 32px;
+    }
+
+    .photo-preview-inline {
+        width: 100px;
+        height: 100px;
+    }
+
+    .photo-preview-inline i {
+        font-size: 28px;
+    }
+
+    /* Landing page */
+    .hero-section {
+        min-height: auto;
+    }
+
+    .landing-nav {
+        padding: 15px 0;
+    }
+
+    .hero-content {
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-hero {
+        width: 100%;
+        padding: 15px 28px;
+        font-size: 15px;
+        justify-content: center;
+    }
+
+    /* Features section */
+    .features-section {
+        padding: 60px 0;
+    }
+
+    .section-header-landing {
+        margin-bottom: 40px;
+    }
+
+    .section-header-landing h2 {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .section-header-landing p {
+        font-size: 16px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feature-card {
+        padding: 30px 20px;
+    }
+
+    .feature-icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 20px;
+    }
+
+    .feature-icon i {
+        font-size: 32px;
+    }
+
+    .feature-card h3 {
+        font-size: 20px;
+    }
+
+    .feature-card p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* About section */
+    .about-section {
+        padding: 60px 0;
+    }
+
+    .about-text h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .about-stats {
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .stat {
+        padding: 20px;
+    }
+
+    .stat h3 {
+        font-size: 36px;
+    }
+
+    /* CTA section */
+    .cta-section {
+        padding: 60px 0;
+    }
+
+    .cta-section h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+        line-height: 1.3;
+    }
+
+    .cta-section p {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+
+    /* Footer */
+    .landing-footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer-content {
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    /* Admin panel */
+    .admin-stats {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .stat-card {
+        padding: 20px;
+        flex-direction: row;
+    }
+
+    .stat-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+
+    .stat-info h3 {
+        font-size: 28px;
+    }
+
+    .admin-table-container {
+        padding: 20px 15px;
+    }
+
+    .admin-table-container h3 {
+        font-size: 18px;
+        gap: 8px;
+    }
+
+    .admin-table {
+        font-size: 12px;
+    }
+
+    .admin-table th,
+    .admin-table td {
+        padding: 10px 8px;
+    }
+
+    /* Toast notifications */
+    #toast-container {
+        right: 10px;
+        left: 10px;
+        top: 70px;
+    }
+
+    .toast {
+        min-width: auto;
+        padding: 15px 18px;
+    }
+
+    .toast-icon {
+        font-size: 20px;
+    }
+
+    .toast-title {
+        font-size: 14px;
+    }
+
+    .toast-message {
+        font-size: 13px;
+    }
+
+    /* Info boxes */
+    .info-box {
+        padding: 15px;
+        font-size: 13px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-box i {
+        font-size: 20px;
+    }
+
+    /* Breed modal */
+    .modal-content {
+        margin: 10% auto;
+        width: 95%;
+        max-height: 85vh;
+        padding: 20px;
+    }
+
+    .modal-close {
+        right: 15px;
+        top: 15px;
+        font-size: 28px;
+    }
+
+    /* Empty state */
+    .empty-state {
+        padding: 60px 20px;
+    }
+
+    .empty-state i {
+        font-size: 60px;
+    }
+
+    .empty-state h3 {
+        font-size: 20px;
+    }
+
+    .empty-state p {
+        font-size: 14px;
+    }
+
+    /* Main footer */
+    .main-footer {
+        padding: 20px 15px;
+        font-size: 13px;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .btn i {
+        font-size: 14px;
+    }
+
+    .btn-lg {
+        padding: 15px 32px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-header h2 {
+        font-size: 20px;
+        gap: 8px;
+    }
+
+    .result-value {
+        font-size: 32px;
+    }
+
+    .result-header h3 {
+        font-size: 20px;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    .calculator-card {
+        padding: 15px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .section-header-landing h2 {
+        font-size: 24px;
+    }
+
+    .cta-section h2 {
+        font-size: 28px;
+    }
+
+    .btn-nav {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .stat-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pet-card-title h3 {
+        font-size: 18px;
+    }
+
+    .modal-container {
+        padding: 25px 15px;
+    }
+
+    .onboarding-card {
+        padding: 20px 15px;
+    }
+}
+
+/* Mejoras de accesibilidad táctil */
+@media (hover: none) and (pointer: coarse) {
+    .btn,
+    .btn-nav,
+    .btn-hero,
+    .nav-btn {
+        min-height: 44px;
+    }
+
+    .pet-card:hover,
+    .feature-card:hover,
+    .breed-card:hover {
+        transform: none;
+    }
+
+    .pet-card:active,
+    .feature-card:active,
+    .breed-card:active {
+        transform: scale(0.98);
+    }
 }
